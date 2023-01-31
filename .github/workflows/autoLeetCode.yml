@@ -20,10 +20,8 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.AUTO_LEETCODE_PUSH }}
         with:
           source-directory: 'output'
-          destination-github-username: rmaomina
-          destination-repository-name: Algorithm
+          destination-github-username: 'rmaomina'
+          destination-repository-name: 'Algorithm'
           commit-message: ${{ github.event.commits[0].message }}
           target-branch: main
-          target-directory: LeetCode
-      - name: Test get variable exported by push-to-another-repository
-        run: echo $DESTINATION_CLONED_DIRECTORY
+          target-directory: 'LeetCode'
