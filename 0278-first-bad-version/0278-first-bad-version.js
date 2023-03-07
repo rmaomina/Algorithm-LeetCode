@@ -21,6 +21,7 @@ var solution = function(isBadVersion) {
       // return Array.from({length: n}, (v, i) => i + 1).filter(el => isBadVersion(el))[0]
       let badNum = n;
       let goodNum = 0;
+      let count = 0
 
       while (badNum - goodNum > 1) {
         let halfNum = Math.floor((badNum + goodNum) / 2)
@@ -29,7 +30,9 @@ var solution = function(isBadVersion) {
         } else {
           goodNum = halfNum
         }
+        count++
       }
+      console.log(count)
       return badNum
     };
 };
