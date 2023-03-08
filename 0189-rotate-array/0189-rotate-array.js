@@ -12,7 +12,6 @@ var rotate = function(nums, k) {
 
 var reverse = function(nums, start, end) {
   while(start < end) {
-    // swap end of elem and first of elem..
     let temp = nums[start];
     nums[start] = nums[end];
     nums[end] = temp;
