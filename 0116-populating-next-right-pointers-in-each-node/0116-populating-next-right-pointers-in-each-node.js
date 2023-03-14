@@ -15,10 +15,10 @@
 var connect = function(root) {
   if (!root) return null;
 
-  let LM = root
+  let leftEnd = root
 
-  while(LM.left) {
-    let curr = LM;
+  while(leftEnd.left) {
+    let curr = leftEnd;
     while(curr) {
       curr.left.next = curr.right;
       if (curr.next) {
@@ -26,7 +26,7 @@ var connect = function(root) {
       }
       curr = curr.next;
     }
-    LM = LM.left;
+    leftEnd = leftEnd.left;
   }
 
   return root
