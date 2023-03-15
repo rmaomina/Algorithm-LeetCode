@@ -11,6 +11,10 @@
  * @return {boolean}
  */
 
+var isValidBST = function(root) {
+  return checkIfValid(root, null, null);
+};
+
 var checkIfValid = function(root, min, max) {
   // 말단 노드까지 검사가 끝났다면 true를 반환
   if (root === null) return true;
@@ -30,6 +34,3 @@ var checkIfValid = function(root, min, max) {
   return checkIfValid(root.left, min, root.val) && checkIfValid(root.right, root.val, max);
 }
 
-var isValidBST = function(root) {
-  return checkIfValid(root, null, null);
-};
